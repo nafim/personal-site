@@ -30,9 +30,24 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '50%'
     },
   },
+  nameTitle: {
+    fontFamily: 'Dosis',
+    color: 'black',
+    textDecoration: 'none',
+    fontSize: '35px',
+    fontWeight: 1000
+  },
   navLinks: {
     margin: theme.spacing(10, 2, 2)
-  }
+  },
+  navLink: {
+    fontFamily: 'Raleway',
+    color: 'black',
+    fontSize: '30px',
+    fontWeight: 400,
+    textDecoration: 'none',
+    margin: theme.spacing(2, 2, 5)
+  },
 }));
 
 interface HeaderProps {
@@ -48,23 +63,38 @@ const Header = ({ siteTitle }: HeaderProps) => {
       </div>
       <Link
         to="/"
-        style={{
-          color: `black`,
-          textDecoration: `none`,
-        }}
+        className={classes.nameTitle}
       >
         Nafim
       </Link>
       <nav className={classes.navLinks}>
       <ul>
         <li>
-          Home
+          <Link
+            to="/"
+            className={classes.navLink}
+
+          >
+            Home
+          </Link>
         </li>
         <li>
-          Portfolio
+          <Link
+            to="/"
+            className={classes.navLink}
+
+          >
+            Resume
+          </Link>
         </li>
         <li>
-          Projects
+          <Link
+            to="/"
+            className={classes.navLink}
+
+          >
+            Projects
+          </Link>
         </li>
       </ul>
       </nav>
