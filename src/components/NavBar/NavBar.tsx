@@ -17,8 +17,12 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       width: '100%',
+      maxWidth: 'none',
       backgroundColor: theme.palette.primary.light,
-      position: 'relative'
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
     },
   },
   profileImage: {
@@ -28,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       width: '50px',
-      borderRadius: '50%'
+      margin: theme.spacing(1, 3, 1)
     },
   },
   nameTitle: {
@@ -39,10 +43,22 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 1000
   },
   navLinks: {
-    margin: theme.spacing(10, 2, 2),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+    [theme.breakpoints.up("xs")]: {
+      margin: theme.spacing(10, 2, 2),
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'auto',
+      flexGrow: 0
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: theme.spacing(1, 3, 1),
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
+      flexGrow: 1
+    },
   },
   navLink: {
     fontFamily: 'Raleway',

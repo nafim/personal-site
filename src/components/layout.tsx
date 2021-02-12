@@ -7,12 +7,25 @@ import "fontsource-raleway/700.css";
 
 import NavBar from "./NavBar/NavBar"
 import "./layout.css"
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  content: {
+    [theme.breakpoints.up("xs")]: {
+      marginLeft: 'min(25%, 350px)'
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: 0
+    },
+  },
+}));
 
 interface LayoutProps {
   children: ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const classes = useStyles();
   const data: any = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,7 +41,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
       <NavBar siteTitle={siteTitle} />
-      <div style={{width: '75%'}}>
+      <div className={classes.content}>
         <main>{children}</main>
         <footer
           style={{
