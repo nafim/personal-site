@@ -7,8 +7,9 @@ const useStyles = makeStyles((theme) => ({
   headerBar: {
     [theme.breakpoints.up("xs")]: {
       height: '100%',
-      width: '20%',
-      backgroundColor: theme.palette.primary.main,
+      width: '25%',
+      maxWidth: '350px',
+      backgroundColor: theme.palette.primary.light,
       position: 'fixed',
       display: 'flex',
       flexDirection: 'column',
@@ -16,14 +17,14 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       width: '100%',
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.light,
       position: 'relative'
     },
   },
   profileImage: {
     [theme.breakpoints.up("xs")]: {
       width: '150px',
-      margin: theme.spacing(3, 2, 3)
+      margin: theme.spacing(5, 2, 5)
     },
     [theme.breakpoints.down("sm")]: {
       width: '50px',
@@ -34,19 +35,26 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Dosis',
     color: 'black',
     textDecoration: 'none',
-    fontSize: '35px',
+    fontSize: '40px',
     fontWeight: 1000
   },
   navLinks: {
-    margin: theme.spacing(10, 2, 2)
+    margin: theme.spacing(10, 2, 2),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   },
   navLink: {
     fontFamily: 'Raleway',
-    color: 'black',
-    fontSize: '30px',
-    fontWeight: 400,
+    color: '#00000091',
+    fontSize: '20px',
+    fontWeight: 700,
     textDecoration: 'none',
-    margin: theme.spacing(2, 2, 5)
+    margin: theme.spacing(2, 2, 1),
+    transition: 'all 0.2s ease',
+    '&:hover': {
+      color: theme.palette.secondary.main
+    },
   },
 }));
 
@@ -68,35 +76,27 @@ const Header = ({ siteTitle }: HeaderProps) => {
         Nafim
       </Link>
       <nav className={classes.navLinks}>
-      <ul>
-        <li>
-          <Link
-            to="/"
-            className={classes.navLink}
+        <Link
+          to="/"
+          className={classes.navLink}
 
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/"
-            className={classes.navLink}
+        >
+          Home
+        </Link>
+        <Link
+          to="/"
+          className={classes.navLink}
 
-          >
-            Resume
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/"
-            className={classes.navLink}
+        >
+          Projects
+        </Link>
+        <Link
+          to="/"
+          className={classes.navLink}
 
-          >
-            Projects
-          </Link>
-        </li>
-      </ul>
+        >
+          Resume
+        </Link>
       </nav>
     </aside>
   );

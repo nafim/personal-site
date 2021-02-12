@@ -2,8 +2,8 @@ import React, {ReactNode} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // import fonts
-import "fontsource-dosis";
-import "fontsource-raleway";
+import "fontsource-dosis/700.css";
+import "fontsource-raleway/700.css";
 
 import NavBar from "./NavBar/NavBar"
 import "./layout.css"
@@ -26,9 +26,9 @@ const Layout = ({ children }: LayoutProps) => {
   const siteTitle: string = data.site.siteMetadata?.title || `Title`;
 
   return (
-    <>
+    <div>
       <NavBar siteTitle={siteTitle} />
-      <div>
+      <div style={{width: '75%'}}>
         <main>{children}</main>
         <footer
           style={{
@@ -38,7 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
           © {new Date().getFullYear()} Nafim Rahman
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
