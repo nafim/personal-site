@@ -3,9 +3,10 @@ import { useStaticQuery, graphql } from "gatsby";
 
 // import fonts
 import "fontsource-dosis/700.css";
+import "fontsource-dosis/500.css";
 import "fontsource-raleway/700.css";
 
-import NavBar from "./NavBar/NavBar"
+import NavBar from "../NavBar/NavBar"
 import "./layout.css"
 import { makeStyles } from "@material-ui/core/styles";
 

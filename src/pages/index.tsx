@@ -1,17 +1,51 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
+import { makeStyles } from "@material-ui/core";
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Nafim Rahman</h1>
-    <p>CS Student at MIT.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-  </Layout>
-)
+const useStyles = makeStyles((theme) => ({
+  title: {
+    fontFamily: 'Dosis',
+    fontSize: '3rem',
+    fontWeight: 500,
+    margin: theme.spacing(20, 0, 3),
+    textAlign: 'center'
+  },
+  mainTextContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  detailsTextContainer: {
+    width: '70%',
+    maxWidth: '30rem',
+  }
+}));
+
+const IndexPage = () => {
+  const classes = useStyles();
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div>
+        <div className={classes.mainTextContainer}>
+          <div className={classes.title}>
+            Nafim Rahman
+          </div>
+          <div className={classes.detailsTextContainer}>
+            <p>
+              Hi! I am a Computer Science major at MIT. I am also a programmer, designer, and engineer.
+              When I'm not working, I enjoy playing soccer, reading short stories, traveling to
+              new places, and tinkering on personal projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+}
 
 export default IndexPage
