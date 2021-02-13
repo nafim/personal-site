@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
     },
     [theme.breakpoints.down("sm")]: {
+      height: 'auto',
       width: '100%',
       maxWidth: 'none',
       backgroundColor: theme.palette.primary.light,

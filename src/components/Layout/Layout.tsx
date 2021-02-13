@@ -11,12 +11,17 @@ import "./layout.css"
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    height: '100vh'
+  },
   content: {
     [theme.breakpoints.up("xs")]: {
-      marginLeft: 'min(25%, 350px)'
+      marginLeft: 'min(25%, 350px)',
+      height: '100%'
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: 0
+      marginLeft: 0,
+      height: '100%'
     },
   },
 }));
@@ -40,10 +45,10 @@ const Layout = ({ children }: LayoutProps) => {
   const siteTitle: string = data.site.siteMetadata?.title || `Title`;
 
   return (
-    <div>
+    <div className={classes.root}>
       <NavBar siteTitle={siteTitle} />
-      <div className={classes.content}>
-        <main>{children}</main>
+      <main className={classes.content}>
+        {children}
         <footer
           style={{
             marginTop: `2rem`,
@@ -51,7 +56,7 @@ const Layout = ({ children }: LayoutProps) => {
         >
           © {new Date().getFullYear()} Nafim Rahman
         </footer>
-      </div>
+      </main>
     </div>
   )
 }

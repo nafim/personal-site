@@ -2,10 +2,25 @@ import React from "react";
 import { Link } from "gatsby";
 import { makeStyles } from "@material-ui/core";
 
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout/Layout";
+import SEO from "../components/seo";
+import HomeBackgroundSection from '../components/HomeBackground';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    height: '100%'
+  },
+  backgroundOverlay: {
+    opacity: 0.8,
+    background: 'white',
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 0,
+    content: '""',
+  },
   title: {
     fontFamily: 'Dosis',
     fontSize: '3rem',
@@ -14,9 +29,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   mainTextContainer: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    zIndex: 1
   },
   detailsTextContainer: {
     width: '70%',
@@ -30,7 +47,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div>
+      <HomeBackgroundSection className={classes.root}>
+        <div className={classes.backgroundOverlay} />
         <div className={classes.mainTextContainer}>
           <div className={classes.title}>
             Nafim Rahman
@@ -43,7 +61,7 @@ const IndexPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </HomeBackgroundSection>
     </Layout>
   );
 }
