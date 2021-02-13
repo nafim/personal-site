@@ -7,6 +7,7 @@ import "fontsource-dosis/500.css";
 import "fontsource-raleway/700.css";
 import "fontsource-raleway/500.css";
 import "fontsource-poppins";
+import "fontsource-poppins/600.css";
 
 import NavBar from "../NavBar/NavBar"
 import "./layout.css"
@@ -34,21 +35,10 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const classes = useStyles();
-  const data: any = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  const siteTitle: string = data.site.siteMetadata?.title || `Title`;
 
   return (
     <div className={classes.root}>
-      <NavBar siteTitle={siteTitle} />
+      <NavBar siteTitle='placeholder' />
       <main className={classes.content}>
         {children}
         <footer
@@ -56,7 +46,7 @@ const Layout = ({ children }: LayoutProps) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()} Nafim Rahman
+          © {new Date().getFullYear()} by Nafim Rahman
         </footer>
       </main>
     </div>

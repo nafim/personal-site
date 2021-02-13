@@ -30,12 +30,21 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    zIndex: 1
   },
   detailsTextContainer: {
     width: '70%',
     maxWidth: '40rem',
     textAlign: 'center'
+  },
+  projectLink: {
+    margin: theme.spacing(1,0,2),
+    color: '#00000091',
+    display: 'flex',
+    alignItems: 'center',
+    transition: 'all 0.2s ease',
+    '&:hover': {
+      color: theme.palette.secondary.main
+    },
   }
 }));
 
@@ -56,6 +65,14 @@ const IndexPage = () => {
             When I'm not working, I enjoy playing soccer, reading short stories, traveling to
             new places, and tinkering on personal projects.
           </p>
+          <Link
+            to="/"
+            className={classes.projectLink}
+          >
+            <h5>
+              Check out my projects
+            </h5>
+          </Link>
         </div>
       </HomeBackgroundSection>
     </Layout>

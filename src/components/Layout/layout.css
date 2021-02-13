@@ -27,6 +27,12 @@ h3 {
   font-size: 1.5rem;
   font-weight: 500;
 }
+h5 {
+  font-family: 'Poppins';
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
 p {
   font-family: 'Poppins';
 }
