@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from "gatsby";
 import "fontsource-dosis/700.css";
 import "fontsource-dosis/500.css";
 import "fontsource-raleway/700.css";
+import "fontsource-raleway/500.css";
+import "fontsource-poppins";
 
 import NavBar from "../NavBar/NavBar"
 import "./layout.css"

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { makeStyles } from "@material-ui/core";
+import { Card, makeStyles } from "@material-ui/core";
 
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/seo";
@@ -22,9 +22,6 @@ const useStyles = makeStyles((theme) => ({
     content: '""',
   },
   title: {
-    fontFamily: 'Dosis',
-    fontSize: '3rem',
-    fontWeight: 500,
     margin: theme.spacing(20, 0, 3),
     textAlign: 'center'
   },
@@ -37,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
   },
   detailsTextContainer: {
     width: '70%',
-    maxWidth: '30rem',
+    maxWidth: '40rem',
+    textAlign: 'center'
   }
 }));
 
@@ -50,16 +48,14 @@ const IndexPage = () => {
       <HomeBackgroundSection className={classes.root}>
         <div className={classes.backgroundOverlay} />
         <div className={classes.mainTextContainer}>
-          <div className={classes.title}>
+          <h1 className={classes.title}>
             Nafim Rahman
-          </div>
-          <div className={classes.detailsTextContainer}>
-            <p>
-              Hi! I am a Computer Science major at MIT. I am also a programmer, designer, and engineer.
-              When I'm not working, I enjoy playing soccer, reading short stories, traveling to
-              new places, and tinkering on personal projects.
-            </p>
-          </div>
+          </h1>
+          <p className={classes.detailsTextContainer}>
+            Hi! I am a Computer Science major at MIT. I am also a programmer, designer, and engineer.
+            When I'm not working, I enjoy playing soccer, reading short stories, traveling to
+            new places, and tinkering on personal projects.
+          </p>
         </div>
       </HomeBackgroundSection>
     </Layout>
