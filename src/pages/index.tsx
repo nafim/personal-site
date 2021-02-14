@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Card, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/seo";

@@ -75,7 +75,9 @@ function SEO({ description='', lang='en', meta=[], title }: SEOProps) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="text/javascript" src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    </Helmet>
   )
 }
 

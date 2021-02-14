@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ProfileImage from "./ProfileImage";
 
 const useStyles = makeStyles((theme) => ({
-  headerBar: {
+  navBar: {
     [theme.breakpoints.up("xs")]: {
       height: '100%',
       width: '25%',
@@ -62,27 +62,25 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   navLink: {
-    fontFamily: 'Raleway',
     color: '#00000091',
-    fontSize: '20px',
-    fontWeight: 700,
     textDecoration: 'none',
-    margin: theme.spacing(2, 2, 1),
+    margin: theme.spacing(1, 2, 0),
     transition: 'all 0.2s ease',
     '&:hover': {
       color: theme.palette.secondary.main
     },
   },
+  activeLink: {
+    color: theme.palette.secondary.main,
+    textDecoration: 'none',
+    margin: theme.spacing(1, 2, 0),
+  }
 }));
 
-interface HeaderProps {
-  siteTitle: string
-}
-
-const Header = ({ siteTitle }: HeaderProps) => {
+const NavBar = () => {
   const classes = useStyles();
   return (
-    <aside className={classes.headerBar}>
+    <aside className={classes.navBar}>
       <div className={classes.profileImage}>
         <ProfileImage />
       </div>
@@ -96,27 +94,30 @@ const Header = ({ siteTitle }: HeaderProps) => {
         <Link
           to="/"
           className={classes.navLink}
+          activeClassName={classes.activeLink}
 
         >
-          Home
+          <h2>Home</h2>
         </Link>
         <Link
-          to="/"
+          to="/projects"
           className={classes.navLink}
+          activeClassName={classes.activeLink}
 
         >
-          Projects
+          <h2>Projects</h2>
         </Link>
         <Link
-          to="/"
+          to="/resume"
           className={classes.navLink}
+          activeClassName={classes.activeLink}
 
         >
-          Resume
+          <h2>Resume</h2>
         </Link>
       </nav>
     </aside>
   );
 }
 
-export default Header
+export default NavBar;

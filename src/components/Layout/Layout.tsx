@@ -1,5 +1,4 @@
 import React, {ReactNode} from "react";
-import { useStaticQuery, graphql } from "gatsby";
 
 // import fonts
 import "fontsource-dosis/700.css";
@@ -38,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className={classes.root}>
-      <NavBar siteTitle='placeholder' />
+      <NavBar />
       <main className={classes.content}>
         {children}
         <footer
