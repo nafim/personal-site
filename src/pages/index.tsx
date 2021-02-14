@@ -66,7 +66,7 @@ const IndexPage = () => {
             new places, and tinkering on personal projects.
           </p>
           <Link
-            to="/"
+            to="/projects"
             className={classes.projectLink}
           >
             <h5>

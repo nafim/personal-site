@@ -67,9 +67,9 @@ class ViewSDKClient {
             /* Pass meta data of file */
             metaData: {
                 /* file name */
-                fileName: "Bodea Brochure.pdf",
+                fileName: "Saad Nafim Rahman Resume.pdf",
                 /* file ID */
-                id: "6d07d124-ac85-43b3-a867-36930f502ac6",
+                // id: "6d07d124-ac85-43b3-a867-36930f502ac6",
             }
         }, viewerConfig);
 
