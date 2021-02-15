@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core";
 
 import SEO from "../components/seo";
 import HomeBackgroundSection from '../components/HomeBackground';
+import Footer from "../components/Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
