@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   projectLink: {
-    margin: theme.spacing(1,0,2),
+    margin: theme.spacing(1, 0, 2),
     color: '#00000091',
     display: 'flex',
     alignItems: 'center',
@@ -52,7 +52,7 @@ const IndexPage = () => {
   const classes = useStyles();
 
   return (
-    <div style={{height: '100%'}}>
+    <div style={{ height: '100%' }}>
       <SEO title="Home" />
       <HomeBackgroundSection className={classes.root}>
         <div className={classes.backgroundOverlay} />
@@ -77,7 +77,7 @@ const IndexPage = () => {
             <h4>
               Here's a free joke for you!
             </h4>
-        </div>
+          </div>
         </div>
       </HomeBackgroundSection>
     </div>
