@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, makeStyles } from "@material-ui/core";
 
-import Layout from "../../components/Layout/Layout";
 import SEO from "../../components/seo";
 import StreetSkipperImage from './components/StreetSkipperImage';
 import CardButton from "./components/CardButton";
@@ -35,7 +34,7 @@ const Resume = () => {
   const classes = useStyles();
 
   return (
-    <Layout>
+    <div>
       <SEO title="Projects" />
       <div className={classes.centered}>
         <Card className={classes.card}>
@@ -87,7 +86,7 @@ const Resume = () => {
           </div>
         </Card>
       </div>
-    </Layout>
+    </div>
   );
 }
 

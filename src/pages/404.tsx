@@ -1,10 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles"
 import React from "react"
 
-import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     height: '100%'
   },
@@ -20,7 +19,7 @@ const NotFoundPage = () => {
   const classes = useStyles();
 
   return (
-    <Layout>
+    <div>
       <SEO title="404: Not found" />
       <div className={classes.root}>
         <div className={classes.messageContainer}>
@@ -28,7 +27,7 @@ const NotFoundPage = () => {
           <p>Sorry, this page does not exist.</p>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
 

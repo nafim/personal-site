@@ -1,4 +1,5 @@
 import React, {ReactNode} from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
 // import fonts
 import "fontsource-dosis/700.css";
@@ -9,11 +10,11 @@ import "fontsource-poppins";
 import "fontsource-poppins/600.css";
 
 //import icons
-import "../../icons/style.css";
+import "../icons/style.css";
 
-import NavBar from "../NavBar/NavBar"
-import "./layout.css"
-import { makeStyles } from "@material-ui/core/styles";
+import NavBar from "../components/NavBar";
+import "./layout.css";
+import PageTransition from '../components/PageTransition';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,24 +33,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 interface LayoutProps {
-  children: ReactNode
+  children: ReactNode;
+  location: any;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, location }: LayoutProps) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <NavBar />
       <main className={classes.content}>
-        {children}
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()} by Nafim Rahman
-        </footer>
+        <PageTransition location = {location}>
+          {children}
+        </PageTransition>
       </main>
     </div>
   )

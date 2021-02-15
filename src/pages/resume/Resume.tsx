@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 
-import Layout from "../../components/Layout/Layout";
 import SEO from "../../components/seo";
 import ResumeView from './components/ResumeView';
 
@@ -21,14 +20,14 @@ const Resume = () => {
   const classes = useStyles();
 
   return (
-    <Layout>
+    <div>
       <SEO title="Resume" />
       <div className={classes.centered}>
         <div className={classes.resumeContainer}>
           <ResumeView />
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
 
