@@ -52,7 +52,7 @@ const IndexPage = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div style={{height: '100%'}}>
       <SEO title="Home" />
       <HomeBackgroundSection className={classes.root}>
         <div className={classes.backgroundOverlay} />

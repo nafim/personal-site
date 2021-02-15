@@ -19,14 +19,17 @@ const getTransitionStyles: TransitionStyles = {
   entering: {
     position: `absolute`,
     opacity: 0,
+    height: '100%'
   },
   entered: {
     transition: `opacity ${timeout}ms ease-in-out`,
     opacity: 1,
+    height: '100%'
   },
   exiting: {
     transition: `opacity ${timeout}ms ease-in-out`,
     opacity: 0,
+    height: '100%'
   },
   exited: {},
   unmounted: {}
@@ -35,30 +38,33 @@ const getTransitionStyles: TransitionStyles = {
 interface PageTransitionProps {
   children: ReactNode;
   location: any;
-  
+
 }
 
-const PageTransition = ({ children, location}: PageTransitionProps) => {
+const PageTransition = ({ children, location }: PageTransitionProps) => {
   return (
-    <TransitionGroup>
-    <ReactTransition
-      key={location.pathname}
-      timeout={{
-        enter: timeout,
-        exit: timeout,
-      }}
+    <TransitionGroup
+      style={{height: '100%'}}
     >
-      {status => (
-        <div
-          style={{
-            ...getTransitionStyles[status],
-          }}
-        >
-          {children}
-        </div>
-      )}
-    </ReactTransition>
-  </TransitionGroup>
+      <ReactTransition
+        style={{height: '100%'}}
+        key={location.pathname}
+        timeout={{
+          enter: timeout,
+          exit: timeout,
+        }}
+      >
+        {status => (
+          <div
+            style={{
+              ...getTransitionStyles[status],
+            }}
+          >
+            {children}
+          </div>
+        )}
+      </ReactTransition>
+    </TransitionGroup>
   );
 }
 
