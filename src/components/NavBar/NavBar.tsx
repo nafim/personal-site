@@ -74,6 +74,23 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
     textDecoration: 'none',
     margin: theme.spacing(1, 2, 0),
+  },
+  iconContainer: {
+    [theme.breakpoints.down("sm")]: {
+      display: 'none'
+    },
+    flexGrow: 1,
+    display: 'flex'
+  },
+  icon: {
+    alignSelf: 'flex-end',
+    margin: theme.spacing(0, 3, 5),
+    textDecoration: 'none',
+    color: '#00000091',
+    transition: 'all 0.2s ease',
+    '&:hover': {
+      color: theme.palette.secondary.main
+    },
   }
 }));
 
@@ -116,6 +133,32 @@ const NavBar = () => {
           <h2>Resume</h2>
         </Link>
       </nav>
+      <div className={classes.iconContainer}>
+        <a 
+          href="https://www.facebook.com/nafim.rahman" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={classes.icon}
+        >
+          <i className='icon-facebook' />
+        </a>
+        <a 
+          href="https://www.linkedin.com/in/saadnafimrahman/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={classes.icon}
+        >
+          <i className='icon-linkedin' />
+        </a>
+        <a 
+          href="https://github.com/nafim" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={classes.icon}
+        >
+          <i className='icon-github' />
+        </a>
+      </div>
     </aside>
   );
 }

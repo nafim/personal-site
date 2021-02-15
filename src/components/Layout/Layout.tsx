@@ -8,6 +8,9 @@ import "fontsource-raleway/500.css";
 import "fontsource-poppins";
 import "fontsource-poppins/600.css";
 
+//import icons
+import "../../icons/style.css";
+
 import NavBar from "../NavBar/NavBar"
 import "./layout.css"
 import { makeStyles } from "@material-ui/core/styles";

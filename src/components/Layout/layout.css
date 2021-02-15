@@ -46,4 +46,15 @@ h5 {
 p {
   font-family: 'Poppins';
 }
-
+i {
+  font-family: 'icomoon';
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
