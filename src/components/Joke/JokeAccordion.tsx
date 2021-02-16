@@ -7,6 +7,8 @@ export const JokeAccordion = withStyles({
   root: {
     border: '1px solid rgba(0, 0, 0, .125)',
     boxShadow: 'none',
+    width: '100%',
+    maxWidth: '40rem',
     '&:not(:last-child)': {
       borderBottom: 0,
     },
@@ -40,7 +42,7 @@ export const JokeAccordionSummary = withStyles( (theme) => ({
 
 export const JokeAccordionDetails = withStyles((theme) => ({
   root: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     backgroundColor: theme.palette.primary.light,
     flexDirection: 'column',
     alignItems: 'center'
