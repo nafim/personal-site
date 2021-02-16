@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Resume = () => {
+const Footer = () => {
   const classes = useStyles();
 
   return (
@@ -23,4 +23,4 @@ const Resume = () => {
   );
 }
 
-export default Resume;
+export default Footer;

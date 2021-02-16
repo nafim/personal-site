@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core";
 import SEO from "../components/seo";
 import HomeBackgroundSection from '../components/HomeBackground';
 import Footer from "../components/Footer";
+import Joke from "../components/Joke";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: theme.palette.secondary.main
     },
+  },
+  jokeContainer: {
+    margin: theme.spacing(6, 0, 0)
   }
 }));
 
@@ -73,10 +77,8 @@ const IndexPage = () => {
               Check out my projects
             </h5>
           </Link>
-          <div>
-            <h4>
-              Here's a free joke for you!
-            </h4>
+          <div className={classes.jokeContainer}>
+            <Joke />
           </div>
         </div>
       </HomeBackgroundSection>

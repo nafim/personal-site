@@ -29,10 +29,8 @@ const HomeBackgroundSection = ({ className, children }: HomeBackgroundSectionPro
       className={className}
       fluid={imageData}
       backgroundColor={`#040e18`}
-      title="home-background"
       id="home-background"
       role="img"
-      aria-label="home-background"
     >
       {children}
     </BackgroundImage>
