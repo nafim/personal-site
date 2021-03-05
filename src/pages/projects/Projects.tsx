@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     margin: theme.spacing(2, 2, 1)
   },
+  cardLink: {
+    textDecoration: 'none',
+  },
   cardButton: {
     margin: theme.spacing(0, 0, 1)
   }
@@ -51,7 +54,7 @@ const Projects = () => {
             use their knowledge of the streets in order to meet up.
           </p>
           <div className={classes.centered}>
-            <a href="https://streetskipper.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://streetskipper.com" className={classes.cardLink} target="_blank" rel="noopener noreferrer">
               <CardButton
                 className={classes.cardButton}
                 color="secondary"
@@ -75,7 +78,7 @@ const Projects = () => {
             classes and lectures to engage with their classmates and teachers.
           </p>
           <div className={classes.centered}>
-            <a href="https://umbra.chat" target="_blank" rel="noopener noreferrer">
+            <a href="https://umbra.chat" className={classes.cardLink} target="_blank" rel="noopener noreferrer">
               <CardButton
                 className={classes.cardButton}
                 color="secondary"
@@ -98,7 +101,7 @@ const Projects = () => {
             Users can log in to save their favorite locations.
           </p>
           <div className={classes.centered}>
-            <a href="https://weather.nafimrahman.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://weather.nafimrahman.com/" className={classes.cardLink} target="_blank" rel="noopener noreferrer">
               <CardButton
                 className={classes.cardButton}
                 color="secondary"
