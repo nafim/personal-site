@@ -5,6 +5,7 @@ import SEO from "../../components/seo";
 import StreetSkipperImage from './components/StreetSkipperImage';
 import CardButton from "./components/CardButton";
 import UmbraImage from "./components/UmbraImage";
+import WeatherAppImage from "./components/WeatherAppImage";
 
 const useStyles = makeStyles((theme) => ({
   centered: {
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Resume = () => {
+const Projects = () => {
   const classes = useStyles();
 
   return (
@@ -85,9 +86,32 @@ const Resume = () => {
             </a>
           </div>
         </Card>
+        <Card className={classes.card}>
+          <a href="https://weather.nafimrahman.com/" target="_blank" rel="noopener noreferrer">
+            <WeatherAppImage />
+          </a>
+          <h3 className={classes.projectTitle}>
+            Weather
+          </h3>
+          <p className={classes.projectDescription}>
+            A card-style weather application that allows users to check the weather by zip code.
+            Users can log in to save their favorite locations.
+          </p>
+          <div className={classes.centered}>
+            <a href="https://weather.nafimrahman.com/" target="_blank" rel="noopener noreferrer">
+              <CardButton
+                className={classes.cardButton}
+                color="secondary"
+                onClick={() => { }}
+              >
+                Take a look
+            </CardButton>
+            </a>
+          </div>
+        </Card>
       </div>
     </div>
   );
 }
 
-export default Resume;
+export default Projects;
