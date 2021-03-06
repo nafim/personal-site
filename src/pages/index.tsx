@@ -65,7 +65,7 @@ const IndexPage = () => {
           </h1>
           <p className={classes.detailsTextContainer}>
             Hi! I am a Computer Science major at MIT. I am also a programmer, designer, and engineer.
-            When I'm not working, I enjoy playing soccer, reading short stories, traveling to
+            In my free time I enjoy playing soccer, reading short stories, traveling to
             new places, and tinkering on personal projects.
           </p>
           <Link
